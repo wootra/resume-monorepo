@@ -1,0 +1,15 @@
+{
+  "name": "resume-monoreo",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {
+    "pnpm": "8.5.0"
+  },
+  "devDependencies": {
+    "@nx/workspace": "16.1.4",
+    "nx": "16.1.4",
+    "nx-cloud": "latest"
+  }
+}
