@@ -10,5 +10,9 @@
       "node"
     ]
   },
-  "include": ["vite.config.ts", "src/**/*.d.ts", "src/**/*.spec.jsx"]
+  "include": [
+    "vite.config.ts",
+    "src/**/*.d.ts",
+    "src/**/*.{spec,test}.{js,ts,jsx,tsx}"
+  ]
 }

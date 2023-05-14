@@ -8,10 +8,3 @@ describe('expandPanel', () => {
     expect(rendered.getByText('expand-panel')).not.toBeNull();
   });
 });
-
-describe('expandPanel2', () => {
-  it('should work', () => {
-    const rendered = render(<ExpandPanel />);
-    expect(rendered.getByText('expand-panel')).not.toBeNull();
-  });
-});

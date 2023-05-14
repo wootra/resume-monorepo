@@ -38,7 +38,7 @@
         "tsConfig": "libs/expand-panel/tsconfig.spec.json",
         "reportsDirectory": "../../coverage/libs/expand-panel"
       },
-      "dependsOn": ["build"]
+      "dependsOn": ["^build"]
     }
   },
   "tags": []

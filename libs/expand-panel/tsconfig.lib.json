@@ -6,5 +6,5 @@
     "types": ["node"]
   },
   "include": ["src/**/*.{ts,js,tsx,jsx}"],
-  "exclude": ["jest.config.ts", "src/**/*.spec.jsx"]
+  "exclude": ["jest.config.ts", "src/**/*.{spec,test}.{js,ts,jsx,tsx}"]
 }

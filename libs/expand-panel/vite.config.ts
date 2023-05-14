@@ -27,6 +27,6 @@ export default defineConfig({
       dir: '../../node_modules/.vitest',
     },
     environment: 'jsdom',
-    include: ['src/**/*.spec.jsx'],
+    include: ['src/**/*.{spec,test}.{js,ts,jsx,tsx}'],
   },
 });
