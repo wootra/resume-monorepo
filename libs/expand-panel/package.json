@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "next": "^13.4.2",
+    "react": "^18.2.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.0"
+  }
+}

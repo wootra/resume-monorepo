@@ -1,0 +1,45 @@
+{
+  "name": "expand-panel",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/expand-panel/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/expand-panel",
+        "main": "libs/expand-panel/src/index.js",
+        "tsConfig": "libs/expand-panel/tsconfig.lib.json",
+        "assets": ["libs/expand-panel/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs expand-panel {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/expand-panel/**/*.js",
+          "libs/expand-panel/**/*.jsx",
+          "libs/expand-panel/**/*.ts",
+          "libs/expand-panel/**/*.tsx"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/libs/expand-panel"],
+      "options": {
+        "passWithNoTests": true,
+        "tsConfig": "libs/expand-panel/tsconfig.spec.json",
+        "reportsDirectory": "../../coverage/libs/expand-panel"
+      },
+      "dependsOn": ["build"]
+    }
+  },
+  "tags": []
+}
