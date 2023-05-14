@@ -1,21 +1,21 @@
 {
-  "name": "resume-entry",
+  "name": "resume-entry1",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/resume-entry",
+  "sourceRoot": "apps/resume-entry1",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
-      "dependsOn": ["^build"],
       "options": {
-        "root": "apps/resume-entry",
-        "outputPath": "dist/apps/resume-entry"
+        "root": "apps/resume-entry1",
+        "outputPath": "dist/apps/resume-entry1"
       },
+      "dependsOn": ["^build"],
       "configurations": {
         "development": {
-          "outputPath": "apps/resume-entry"
+          "outputPath": "apps/resume-entry1"
         },
         "production": {}
       }
@@ -24,17 +24,17 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "resume-entry:build",
+        "buildTarget": "resume-entry1:build",
         "dev": true
       },
       "dependsOn": ["^build"],
       "configurations": {
         "development": {
-          "buildTarget": "resume-entry:build:development",
+          "buildTarget": "resume-entry1:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "resume-entry:build:production",
+          "buildTarget": "resume-entry1:build:production",
           "dev": false
         }
       }
@@ -42,14 +42,14 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "resume-entry:build:production"
+        "buildTarget": "resume-entry1:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/resume-entry/jest.config.ts",
+        "jestConfig": "apps/resume-entry1/jest.config.ts",
         "passWithNoTests": true
       },
       "dependsOn": ["^build"],
@@ -62,10 +62,9 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "dependsOn": ["^build"],
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/resume-entry/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/resume-entry1/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

@@ -4,12 +4,14 @@ import { defineConfig } from 'vite';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 import dts from 'vite-plugin-dts';
 import react from '@vitejs/plugin-react';
+
 import { join } from 'path';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/expand-panel',
+  cacheDir: '../../node_modules/.vite/picture-frame',
 
   plugins: [
+    react(),
     dts({
       entryRoot: 'src',
       tsConfigFilePath: join(__dirname, 'tsconfig.lib.json'),
@@ -19,7 +21,6 @@ export default defineConfig({
     viteTsConfigPaths({
       root: '../../',
     }),
-    react(),
   ],
 
   // Uncomment this if you are using workers.
@@ -37,11 +38,11 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
-      name: 'expand-panel',
+      name: 'picture-frame',
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forgot to update your package.json as well.
-      formats: ['es'],
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.

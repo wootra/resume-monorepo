@@ -16,16 +16,23 @@
         "name": "next"
       }
     ],
-    "types": ["jest", "node"]
+    "types": [
+      "jest",
+      "node"
+    ]
   },
   "include": [
-    "**/*.{ts,js,tsx,jsx}",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
     "next-env.d.ts",
-    "../../apps/resume-entry/.next/types/**/*.ts"
+    "../../apps/resume-entry1/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "jest.config.ts",
-    "src/**/*.{spec,test}.{ts,js,tsx,jsx}"
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts"
   ]
 }

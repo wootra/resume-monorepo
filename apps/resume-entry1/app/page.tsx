@@ -1,20 +1,19 @@
-import React from 'react';
+import styles from './page.module.css';
 import { ExpandPanel } from '@resume-monorepo/expand-panel';
-
 export default async function Index() {
   /*
    * Replace the elements below with your own.
    *
-   * Note: The corresponding styles are in the ./index.scss file.
+   * Note: The corresponding styles are in the ./index.css file.
    */
   return (
-    <div className="page">
+    <div className={styles.page}>
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
             <h1>
               <span> Hello there, </span>
-              Welcome resume-entry 👋 <ExpandPanel />
+              Welcome resume-entry1 👋 <ExpandPanel />
             </h1>
           </div>
 

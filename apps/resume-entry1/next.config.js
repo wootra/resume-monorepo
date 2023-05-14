@@ -13,11 +13,8 @@ const nextConfig = {
     svgr: false,
   },
 
-  // experimental: {
-  //   appDir: true,
-  // },
   experimental: {
-    serverActions: true,
+    appDir: true,
   },
 };
 

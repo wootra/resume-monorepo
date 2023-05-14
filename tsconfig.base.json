@@ -10,12 +10,14 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": ["es2020", "dom", "DOM.Iterable"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@wootra/expand-panel": ["libs/expand-panel/src/index.js"]
+      "@resume-monorepo/expand-panel": ["libs/expand-panel/src/index.ts"],
+      "@resume-monorepo/expand-panel/*": ["libs/expand-panel/src/lib/*"],
+      "@resume-monorepo/picture-frame": ["libs/picture-frame/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
